@@ -1,10 +1,10 @@
-## Twitter > telegram
-#### Auto post tweets from Twitter, to a Telegram bot
+## Twitter > Telegram
+### Auto post tweets from Twitter, to a Telegram bot
 
 This bot simply takes a twitter user name, and fetches the latest tweets
 from their timeline. Then reposts those tweets to a telegram bot(or channel via a bot)
 
-#####Requirements:
+####Requirements:
 You need Twython installed. Twython is a twitter-python API
 
 ####Notes:
