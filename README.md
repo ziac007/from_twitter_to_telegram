@@ -1,7 +1,7 @@
 ## Twitter > Telegram
 ### Auto post tweets from Twitter, to a Telegram bot
 
-This bot simply takes a twitter user name, and fetches the latest tweets
+This script simply takes a twitter user name, and fetches the latest tweets
 from their timeline. Then reposts those tweets to a telegram bot(or channel via a bot)
 
 ####Requirements:
