@@ -1,4 +1,4 @@
-## Twitter > Telegram
+## Twitter >> Telegram
 ### Auto post tweets from Twitter, to a Telegram bot
 
 This script simply takes a twitter user name, and fetches the latest tweets
