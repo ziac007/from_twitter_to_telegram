@@ -1,5 +1,6 @@
 import os, time
 import twython as Twython
+from urllib import quote
 
 ## Twitter application authentication ##
 # The following strings are placeholders, with dummy keys that will not work!
@@ -39,6 +40,7 @@ def read_latest_id():
         else:
             return line
 def send_message(msg):
+    msg = quote(msg, safe='')
     link = 'https://api.telegram.org/bot'+telegram_token+'/sendMessage?chat_id=@'+bot_name+'\&text="' + msg + '"'
     os.system('curl '+ link)
     
