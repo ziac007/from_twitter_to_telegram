@@ -20,6 +20,12 @@ telegram_token = '183020244:AAEJvzg7VqRfGJAAjleX9ZdGiIKfm9QweFQ'
 ## Twitter User Name to get Timeline ##
 user_name = 'RasPiBot_'
 
+def first_run():
+    file_exists = os.path.exists(channel_name+"_latest_id.txt")
+    if file_exists is False:
+        user_timeline = api.get_user_timeline(screen_name=user_name, count=2)
+        tweet_id = user_timeline[1]['id']
+        writeToLog(tweet_id)
 def get_timeline(latest_tweet_id):
     user_timeline = api.get_user_timeline(screen_name=user_name, since_id=latest_tweet_id)
     return user_timeline
@@ -56,5 +62,6 @@ def main():
                 time.sleep(4)
         latest_tweet_id = user_timeline[0]['id']
     writeToLog(latest_tweet_id)
-   
+
+first_run()
 main()
