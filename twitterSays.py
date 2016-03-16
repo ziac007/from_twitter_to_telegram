@@ -13,8 +13,8 @@ OAUTH_TOKEN_SECRET = 'XXXxXXXxXxxXXXxXxxXxXXxXXXxXxXXXXxXxXXxXX'
 api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
 
-## Your Telegram Bot Name ##
-bot_name = 'geremysays'
+## Your Telegram Channel Name ##
+channel_name = 'geremysays'
 ## Telegram Access Token ##
 telegram_token = 'nnnnnnnnnnnnn:xxxXXXxXxXxXxXXxXxxXxxxxXx'
 ## Twitter User Name to get Timeline ##
@@ -24,15 +24,15 @@ def get_timeline(latest_tweet_id):
     user_timeline = api.get_user_timeline(screen_name=user_name, since_id=latest_tweet_id)
     return user_timeline
 def writeToLog(msg):
-    log_file = open(bot_name+"_latest_id.txt", "w")
+    log_file = open(channel_name+"_latest_id.txt", "w")
     log_file.write(str(msg))
     log_file.close()
 def read_latest_id():
-    file_exists = os.path.exists(bot_name+"_latest_id.txt")
+    file_exists = os.path.exists(channel_name+"_latest_id.txt")
     if file_exists is False:
         writeToLog('0')
     else:
-        log_file = open(bot_name+"_latest_id.txt", "r")
+        log_file = open(channel_name+"_latest_id.txt", "r")
         line = log_file.read()
         log_file.close()
         if len(str(line)) < 2:
@@ -41,7 +41,7 @@ def read_latest_id():
             return line
 def send_message(msg):
     msg = quote(msg, safe='')
-    link = 'https://api.telegram.org/bot'+telegram_token+'/sendMessage?chat_id=@'+bot_name+'\&text="' + msg + '"'
+    link = 'https://api.telegram.org/bot'+telegram_token+'/sendMessage?chat_id=@'+channel_name+'\&text="' + msg + '"'
     os.system('curl '+ link)
     
 def main():
