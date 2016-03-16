@@ -14,11 +14,11 @@ api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
 
 ## Your Telegram Channel Name ##
-channel_name = 'geremySaya'
+channel_name = 'geremysays'
 ## Telegram Access Token ##
 telegram_token = 'nnnnnnnnnnnnn:XxxXXXxXxXxXxXXxXxxXxxxxXx'
 ## Twitter User Name to get Timeline ##
-user_name = 'geremySays'
+user_name = 'GeremySays'
 
 def first_run():
     file_exists = os.path.exists(channel_name+"_latest_id.txt")
