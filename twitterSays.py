@@ -5,20 +5,20 @@ from urllib import quote
 ## Twitter application authentication ##
 # The following strings are placeholders, with dummy keys that will not work!
 # Replace these keys, with your own. http://dev.twitter.com/docs/api/1.1/overview/. 
-APP_KEY = 'XXXxxXXXXXxxXXXXxXxxxXxxXxXXxxXxXxXxXXXxX'
-APP_SECRET = 'xxxXXXXXxXxXxxxXXxXxXxxXXXXxxXxXXXxxXXxxXxxxxxX'
-OAUTH_TOKEN = 'XXxXXXXXxxXXxxXxXxxxXXXxXxxxXxXXXxxXxXxXxxXxxx'
-OAUTH_TOKEN_SECRET = 'XXXxXXXxXxxXXXxXxxXxXXxXXXxXxXXXXxXxXXxXX'
+APP_KEY = 'XXXxxXXXxXxxXXXXxXxxxXxxXxXXxxXxXxXxXXXxX'
+APP_SECRET = 'xxxXXxXXxXxXxxxXXxXxXxxXXXXxxXxXXXxxXXxxXxxxxxX'
+OAUTH_TOKEN = 'XXxXXxXXxxXXxxXxXxxxXXXxXxxxXxXXXxxXxXxXxxXxxx'
+OAUTH_TOKEN_SECRET = 'xXXxXXXxXxxXXXxXxxXxXXxXXXxXxXXXXxXxXXxXX'
 
 api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
 
 ## Your Telegram Channel Name ##
-channel_name = 'geremysays'
+channel_name = 'geremySaya'
 ## Telegram Access Token ##
-telegram_token = 'nnnnnnnnnnnnn:xxxXXXxXxXxXxXXxXxxXxxxxXx'
+telegram_token = 'nnnnnnnnnnnnn:XxxXXXxXxXxXxXXxXxxXxxxxXx'
 ## Twitter User Name to get Timeline ##
-user_name = 'GeremySays'
+user_name = 'geremySays'
 
 def get_timeline(latest_tweet_id):
     user_timeline = api.get_user_timeline(screen_name=user_name, since_id=latest_tweet_id)
