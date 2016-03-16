@@ -1,24 +1,25 @@
 import os, time
 import twython as Twython
 from urllib import quote
+from SETTINGS.py import *
 
 ## Twitter application authentication ##
 # The following strings are placeholders, with dummy keys that will not work!
 # Replace these keys, with your own. http://dev.twitter.com/docs/api/1.1/overview/. 
-APP_KEY = '8pLF53UUKYhz2wIoFV88iqrNh'
-APP_SECRET = 'qjpqTrmSFIO6Ex8iDwzkTUyKqJDLGoghPvjtnv8MsvmKgAHxp6'
-OAUTH_TOKEN = '700949419424808960-f1DRk0qc0ZUUBxzJUamMBZpK9Pt0jcG'
-OAUTH_TOKEN_SECRET = 'ohNqr7n8ha5ceoJ8PFk7my0VU8MDRr3K4slscmA1CWDjX'
+#APP_KEY = '8pLF53UUKYhz2wIoFV88iqrNh'
+#APP_SECRET = 'qjpqTrmSFIO6Ex8iDwzkTUyKqJDLGoghPvjtnv8MsvmKgAHxp6'
+#OAUTH_TOKEN = '700949419424808960-f1DRk0qc0ZUUBxzJUamMBZpK9Pt0jcG'
+#OAUTH_TOKEN_SECRET = 'ohNqr7n8ha5ceoJ8PFk7my0VU8MDRr3K4slscmA1CWDjX'
 
 api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
 
 ## Your Telegram Channel Name ##
-channel_name = 'Raspibot2'
+#channel_name = 'Raspibot2'
 ## Telegram Access Token ##
-telegram_token = '183020244:AAEJvzg7VqRfGJAAjleX9ZdGiIKfm9QweFQ'
+#telegram_token = '183020244:AAEJvzg7VqRfGJAAjleX9ZdGiIKfm9QweFQ'
 ## Twitter User Name to get Timeline ##
-user_name = 'RasPiBot_'
+#user_name = 'RasPiBot_'
 
 def first_run():
     file_exists = os.path.exists(channel_name+"_latest_id.txt")
