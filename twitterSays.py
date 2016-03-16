@@ -1,24 +1,10 @@
 import os, time
 import twython as Twython
 from urllib import quote
-
-## Twitter application authentication ##
-# The following strings are placeholders, with dummy keys that will not work!
-# Replace these keys, with your own. http://dev.twitter.com/docs/api/1.1/overview/. 
-APP_KEY = 'XXXxxXXXxXxxXXXXxXxxxXxxXxXXxxXxXxXxXXXxX'
-APP_SECRET = 'xxxXXxXXxXxXxxxXXxXxXxxXXXXxxXxXXXxxXXxxXxxxxxX'
-OAUTH_TOKEN = 'XXxXXxXXxxXXxxXxXxxxXXXxXxxxXxXXXxxXxXxXxxXxxx'
-OAUTH_TOKEN_SECRET = 'xXXxXXXxXxxXXXxXxxXxXXxXXXxXxXXXXxXxXXxXX'
+from SETTINGS import *
 
 api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
-
-## Your Telegram Channel Name ##
-channel_name = 'geremysays'
-## Telegram Access Token ##
-telegram_token = 'nnnnnnnnnnnnn:XxxXXXxXxXxXxXXxXxxXxxxxXx'
-## Twitter User Name to get Timeline ##
-user_name = 'GeremySays'
 
 def first_run():
     file_exists = os.path.exists(channel_name+"_latest_id.txt")
