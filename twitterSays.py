@@ -5,10 +5,10 @@ from urllib import quote
 ## Twitter application authentication ##
 # The following strings are placeholders, with dummy keys that will not work!
 # Replace these keys, with your own. http://dev.twitter.com/docs/api/1.1/overview/. 
-APP_KEY = 'f123abcjfdj9939123abcwe90u'
-APP_SECRET = '123123AbCAbc4asoiDgF8HDF123lkjreogDHFNnweDHJHNBF'
-OAUTH_TOKEN = '1231231111111191919-asdfj39ejfjasljDJLf0wFhhskFHgg9'
-OAUTH_TOKEN_SECRET = 'oNsdfhNFJD123123njn2A94ufdsa4JFRehf9i43FHewhf'
+APP_KEY = 'XXXxxXXXXXxxXXXXxXxxxXxxXxXXxxXxXxXxXXXxX'
+APP_SECRET = 'xxxXXXXXxXxXxxxXXxXxXxxXXXXxxXxXXXxxXXxxXxxxxxX'
+OAUTH_TOKEN = 'XXxXXXXXxxXXxxXxXxxxXXXxXxxxXxXXXxxXxXxXxxXxxx'
+OAUTH_TOKEN_SECRET = 'XXXxXXXxXxxXXXxXxxXxXXxXXXxXxXXXXxXxXXxXX'
 
 api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
@@ -16,7 +16,7 @@ latest_tweet_id = 0
 ## Your Telegram Bot Name ##
 bot_name = 'geremysays'
 ## Telegram Access Token ##
-telegram_token = '111101011123:Asd63Sdfh8HS3YdgQksd843'
+telegram_token = 'nnnnnnnnnnnnn:xxxXXXxXxXxXxXXxXxxXxxxxXx'
 ## Twitter User Name to get Timeline ##
 user_name = 'GeremySays'
 
