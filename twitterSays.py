@@ -14,7 +14,7 @@ api = Twython.Twython(APP_KEY, APP_SECRET, OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
 latest_tweet_id = 0
 
 ## Your Telegram Channel Name ##
-channel_name = 'RasPi2_Bot'
+channel_name = 'Raspibot2'
 ## Telegram Access Token ##
 telegram_token = '183020244:AAEJvzg7VqRfGJAAjleX9ZdGiIKfm9QweFQ'
 ## Twitter User Name to get Timeline ##
