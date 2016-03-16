@@ -1,7 +1,7 @@
 import os, time
 import twython as Twython
 from urllib import quote
-from SETTINGS.py import *
+from SETTINGS import *
 
 ## Twitter application authentication ##
 # The following strings are placeholders, with dummy keys that will not work!
