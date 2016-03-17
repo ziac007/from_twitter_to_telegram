@@ -1,4 +1,4 @@
-import os, time
+import os, time, pickle
 import twython as Twython
 from urllib import quote
 from SETTINGS import *
@@ -35,7 +35,13 @@ def send_message(msg):
     msg = quote(msg, safe='')
     link = 'https://api.telegram.org/bot'+telegram_token+'/sendMessage?chat_id=@'+channel_name+'\&text="' + msg + '"'
     os.system('curl '+ link)
-    
+   
+def pickle(var):
+    pickle.dump(var, open("sav.p", "wb"))
+def unpickle():
+    saved = pickle.load(open('sav.p', "rb"))
+    return saved
+ 
 def main():
     latest_tweet_id = read_latest_id()
     user_timeline = get_timeline(latest_tweet_id)
