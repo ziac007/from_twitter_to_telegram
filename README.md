@@ -18,7 +18,3 @@ only get the newest tweets, since last time we ran the script.
 
 You can schedule the script to run with something like using cron jobs, 
 every 10 min for example. I run mine at every 5 min for my current bot.
-
-####If you have Lots of Tweets Already!:
-You may want to adjust the count of the get_timeline request for the first time
-the script runs. Other wise, it may continually post up to the last 200 messages!
