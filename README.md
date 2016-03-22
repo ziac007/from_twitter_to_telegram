@@ -12,7 +12,7 @@ You need Twython installed. Twython is a twitter-python API
 Just create a Telegram Bot(takes only seconds) and add your new bot as an
 administrator to your Channel.
 
-The script makes a txt file that holds the tweet ID of the latest tweet it 
+The script makes a "pickled" file that holds the tweet ID of the latest tweet it 
 recieved. That way, we can compare the tweet ID later, and make sure that we
 only get the newest tweets, since last time we ran the script.
 
