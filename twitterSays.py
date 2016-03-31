@@ -10,7 +10,7 @@ latest_tweet_id = 0
 def first_run():
     file_exists = os.path.exists('sav.p')
     if file_exists is False:
-        user_timeline = api.get_user_timeline(screen_name=user_name, count=2)
+        user_timeline = api.get_user_timeline(screen_name=user_name, count=2)#This 'count' is how many tweets back from the most recent tweet that will be fowarded to telegram
         tweet_id = user_timeline[1]['id']
         file_pickle(tweet_id)
 def get_timeline(latest_tweet_id):
