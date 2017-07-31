@@ -4,10 +4,10 @@
 This script simply takes a twitter user name, and fetches the latest tweets
 from their timeline. Then reposts those tweets to a telegram channel(via a bot)
 
-####Requirements:
+#### Requirements:
 You need Twython installed. Twython is a twitter-python API
 
-####Notes:
+#### Notes:
 
 Just create a Telegram Bot(takes only seconds) and add your new bot as an
 administrator to your Channel.
